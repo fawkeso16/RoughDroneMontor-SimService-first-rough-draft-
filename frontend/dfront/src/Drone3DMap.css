@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.drone-marker {
+  position: relative;
+  transform: translate(-50%, -50%); 
+}
+
+.drone-dot {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 5px rgba(255,0,0,0.8);
+  cursor: pointer;
+}
+
+.drone-info-box-container {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+  white-space: nowrap;
+  font-size: 12px;
+  pointer-events: auto; 
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* left:2%; */
+}
+
+.mapboxgl-canvas { outline: none; }
+
+.drone-marker-2d { z-index: 10000 !important; }
+.mapboxgl-popup.drone-info-popup { z-index: 10001 !important; }
+
+.mapboxgl-popup.drone-info-popup { max-width: none !important; }
+.mapboxgl-popup.drone-info-popup .mapboxgl-popup-content {
+  background: transparent; border: none; box-shadow: none; padding: 0; border-radius: 0;
+}
+.mapboxgl-popup.drone-info-popup .mapboxgl-popup-tip { display: none; }
+
+.unfollow-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.unfollow-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
